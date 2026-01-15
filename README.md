@@ -18,23 +18,43 @@ For the sclsd package, see [csglab/sclsd](https://github.com/csglab/sclsd).
 | Tutorial | Quick start example | — |
 | Unseen_Bonemarrow | Generalization experiments | — |
 
-## Data
+## Setup
 
-Download preprocessed data from Zenodo: [ZENODO_LINK_PLACEHOLDER]
+1. Create and activate a virtual environment:
+   ```bash
+   conda create -n sclsd python=3.10 -y
+   conda activate sclsd
+   ```
 
-Place the downloaded data in a `data` directory alongside the notebooks:
+2. Install sclsd:
+   ```bash
+   pip install sclsd
+   ```
 
-```
-├── notebooks/
-└── data/
-    ├── BoneMarrow/
-    ├── DentateGyrus/
-    ├── Erythroid/
-    ├── KP_tracer/
-    ├── Mouse_Cortex/
-    ├── Pancreas/
-    └── Zebrafish/
-```
+3. Install dependencies to run notebooks:
+   ```bash
+   pip install ipykernel ipywidgets
+   ```
+
+4. Install gseapy for gene set enrichment analysis:
+   ```bash
+   pip install gseapy
+   ```
+
+5. Download preprocessed data from Zenodo: [ZENODO_LINK_PLACEHOLDER]
+
+6. Place the downloaded data in a `data` directory alongside the notebooks:
+   ```
+   ├── notebooks/
+   └── data/
+       ├── BoneMarrow/
+       ├── DentateGyrus/
+       ├── Erythroid/
+       ├── KP_tracer/
+       ├── Mouse_Cortex/
+       ├── Pancreas/
+       └── Zebrafish/
+   ```
 
 ## Citation
 
