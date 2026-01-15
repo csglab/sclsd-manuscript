@@ -20,7 +20,21 @@ For the sclsd package, see [csglab/sclsd](https://github.com/csglab/sclsd).
 
 ## Data
 
-Preprocessed data can be downloaded from Zenodo: [ZENODO_LINK_PLACEHOLDER]
+Download preprocessed data from Zenodo: [ZENODO_LINK_PLACEHOLDER]
+
+Place the downloaded data in a `data` directory alongside the notebooks:
+
+```
+├── notebooks/
+└── data/
+    ├── BoneMarrow/
+    ├── DentateGyrus/
+    ├── Erythroid/
+    ├── KP_tracer/
+    ├── Mouse_Cortex/
+    ├── Pancreas/
+    └── Zebrafish/
+```
 
 ## Citation
 
