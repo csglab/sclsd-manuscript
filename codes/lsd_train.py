@@ -368,7 +368,7 @@ class LSD:
 
 
 
-    def load(self, dir_path="checkpoints", file_name="model_and_params.pth"):
+    def load(self, dir_path="checkpoints", file_name="model_and_params.pth", weights_only=False):
         """
         Loads the LSD model's state_dict and Pyro's parameter store from a file
         in the specified directory.
@@ -381,7 +381,7 @@ class LSD:
             self: Returns self for chaining.
         """
         file_path = os.path.join(dir_path, file_name)
-        checkpoint = torch.load(file_path, map_location=self.device)
+        checkpoint = torch.load(file_path, map_location=self.device, weights_only=weights_only)
 
         # Load model state_dict
         self.lsd.load_state_dict(checkpoint['model_state_dict'])
