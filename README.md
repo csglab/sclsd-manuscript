@@ -15,8 +15,8 @@ For the sclsd package, see [csglab/sclsd](https://github.com/csglab/sclsd).
 | Mouse_cortex | Mouse cortical development | Zheng et al., Cell 2024 |
 | Pancreas | Pancreatic endocrinogenesis | Klein et al., Nature 2025 |
 | Zebrafish | Zebrafish axial mesoderm development | Farrell et al., Science 2018 |
-| Tutorial | Quick start example | — |
-| Unseen_Bonemarrow | Generalization experiments | — |
+| Vignette | Human hematopoiesis | Setty et al., Nat Biotechnol 2019 |
+| Unseen_Pancreas | Human hematopoiesis | Setty et al., Nat Biotechnol 2019 |
 
 ## Setup
 
@@ -28,6 +28,7 @@ For the sclsd package, see [csglab/sclsd](https://github.com/csglab/sclsd).
 
 2. Install sclsd:
    ```bash
+   pip install torch==2.4.1
    pip install sclsd
    ```
 
@@ -41,20 +42,12 @@ For the sclsd package, see [csglab/sclsd](https://github.com/csglab/sclsd).
    pip install gseapy
    ```
 
-5. Download preprocessed data from Zenodo: [ZENODO_LINK_PLACEHOLDER]
+5. Download preprocessed data from Zenodo: [https://zenodo.org/records/18331587]
 
-6. Place the downloaded data in a `data` directory alongside the notebooks:
-   ```
-   ├── notebooks/
-   └── data/
-       ├── BoneMarrow/
-       ├── DentateGyrus/
-       ├── Erythroid/
-       ├── KP_tracer/
-       ├── Mouse_Cortex/
-       ├── Pancreas/
-       └── Zebrafish/
-   ```
+## Vignette: end-to-end example from raw data
+The `Vignette/` directory provides an end-to-end example of training an LSD model starting from a raw single-cell dataset, including preprocessing, model fitting and post training analysis. This vignette is intended to illustrate the full workflow underlying the preprocessed AnnData objects distributed here and complements the dataset-focused notebooks in the reproducibility repository.
+
+
 
 ## Citation
 
