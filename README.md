@@ -53,9 +53,12 @@ use paths relative to their own directories, such as `../../Zenodo/`; run each
 notebook with its working directory set to the directory containing that
 notebook.
 
-The notebooks use stochastic model training. Exact package versions, random
-seeds, hardware requirements, runtime, and memory measurements will be recorded
-alongside the revised manuscript analyses.
+The notebooks use stochastic model training. The exact input files and
+checksums, dataset dimensions, package revisions, tested software environment,
+random seeds, model configurations, notebook order, and hardware are recorded
+in [REPRODUCIBILITY.md](REPRODUCIBILITY.md). Controlled end-to-end runtime and
+peak-memory measurements are tracked separately from this static
+reproducibility record.
 
 ## Vignette: end-to-end example from raw data
 
