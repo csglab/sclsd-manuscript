@@ -147,15 +147,36 @@ Configuration values not listed below retain the defaults defined by
 
 ## Runtime and memory reporting
 
-Controlled end-to-end training time and peak GPU-memory measurements are part
-of the separate runtime and scaling response. Each reported measurement will
-identify the dataset, software commit, hardware environment, walk
-configuration, batch size, epochs, seed, and measurement method. Existing
-notebook progress-bar times are not treated as controlled benchmarks because
-they do not record peak memory and may include different allocator or session
-state.
+End-to-end Bone Marrow and Cancer benchmarks were run on the H100 server with
+32 CPU threads available to each process. Each run used a fresh process and the
+audited notebook configuration. The scripts measured prior-transition,
+random-walk, and training wall and CPU time internally, while an independent
+monitor sampled process-tree RSS, GPU process memory, GPU utilization, and
+power. Existing notebook progress-bar times were not used as benchmark data.
+
+| Dataset | Implementation | Total wall | Peak CPU RSS | Peak GPU process memory | Peak PyTorch allocation |
+|---|---|---:|---:|---:|---:|
+| Bone Marrow | dense | 1,660.78 s | 3.05 GiB | 1.63 GiB | 0.79 GiB |
+| Bone Marrow | sparse | 1,596.67 s | 2.89 GiB | 1.67 GiB | 0.78 GiB |
+| Cancer | dense | 649.23 s | 33.25 GiB | 6.96 GiB | 6.14 GiB |
+| Cancer | sparse | 698.30 s | 6.62 GiB | 1.39 GiB | 0.54 GiB |
+
+For Cancer, the sparse implementation reduced peak CPU RSS by 80.08%, peak GPU
+process memory by 80.04%, and peak PyTorch allocation by 91.20%. The total wall
+time was 7.56% longer, illustrating that the revision targets memory safety and
+does not guarantee faster model training. During Cancer walk generation, peak
+PyTorch allocation fell from 6.14 GiB to approximately 10 MiB because the
+complete cell-by-cell transition matrix was no longer transferred to the GPU.
+
+Native dense and sparse runs use different random-walk samplers and therefore
+do not consume identical trajectories from the same seed. A controlled
+one-epoch validation froze the dense walk tensor and verified that both
+implementations loaded the identical content hash for each dataset. The full
+methodology, stage-level results, limitations, exact commits, and rerun commands
+are in [`benchmarks/H100_BENCHMARK_REPORT.md`](benchmarks/H100_BENCHMARK_REPORT.md).
 
 The sparse-transition benchmarks and their limitations are recorded in
 `sclsd/benchmarks/results/comment7_benchmark_report.md` in the package
-repository. Those measurements address transition construction and walk
-generation; they do not replace the pending end-to-end training benchmarks.
+repository. Those five-repetition measurements address function-level
+transition construction and walk-generation scaling and complement the
+end-to-end results above.

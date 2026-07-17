@@ -1,0 +1,80 @@
+SCLSD_BENCHMARK_EVENT {"event": "stage_start", "stage": "data_load", "time": "2026-07-17T20:14:12.691518+00:00"}
+SCLSD_BENCHMARK_EVENT {"cpu_seconds": 0.5052168750000003, "cuda_peak_allocated_bytes": 0, "cuda_peak_reserved_bytes": 0, "cuda_start_allocated_bytes": 0, "cuda_start_reserved_bytes": 0, "error": null, "event": "stage_end", "name": "data_load", "status": "ok", "time": "2026-07-17T20:14:13.196987+00:00", "wall_seconds": 0.5054507963359356}
+SCLSD_BENCHMARK_EVENT {"event": "stage_start", "stage": "model_initialization", "time": "2026-07-17T20:14:13.197362+00:00"}
+SCLSD_BENCHMARK_EVENT {"cpu_seconds": 0.22385033399999976, "cuda_peak_allocated_bytes": 11011072, "cuda_peak_reserved_bytes": 25165824, "cuda_start_allocated_bytes": 0, "cuda_start_reserved_bytes": 0, "error": null, "event": "stage_end", "name": "model_initialization", "status": "ok", "time": "2026-07-17T20:14:13.424781+00:00", "wall_seconds": 0.22740170639008284}
+SCLSD_BENCHMARK_EVENT {"event": "stage_start", "stage": "fixed_walk_load", "time": "2026-07-17T20:14:13.425211+00:00"}
+SCLSD_BENCHMARK_EVENT {"cpu_seconds": 0.000772226999998793, "cuda_peak_allocated_bytes": 10991616, "cuda_peak_reserved_bytes": 25165824, "cuda_start_allocated_bytes": 10991616, "cuda_start_reserved_bytes": 25165824, "error": null, "event": "stage_end", "name": "fixed_walk_load", "status": "ok", "time": "2026-07-17T20:14:13.426070+00:00", "wall_seconds": 0.0008509177714586258}
+SCLSD_BENCHMARK_EVENT {"event": "stage_start", "stage": "training", "time": "2026-07-17T20:14:13.426753+00:00"}
+
+Training Epochs:   0%|          | 0/1 [00:00<?, ?it/s]
+
+Epoch 0:   0%|          | 0/32 [00:00<?, ?it/s][A
+Training Epochs:   0%|          | 0/1 [00:01<?, ?it/s, -ELBO=4.0450, Potential Metric=0.0000, Entropy Metric=0.0004]
+
+Epoch 0:   3%|▎         | 1/32 [00:01<00:34,  1.11s/it][A
+Training Epochs:   0%|          | 0/1 [00:01<?, ?it/s, -ELBO=3.7694, Potential Metric=0.0000, Entropy Metric=0.0031]
+Training Epochs:   0%|          | 0/1 [00:01<?, ?it/s, -ELBO=3.8109, Potential Metric=0.0001, Entropy Metric=0.0064]
+
+Epoch 0:   9%|▉         | 3/32 [00:01<00:09,  2.91it/s][A
+Training Epochs:   0%|          | 0/1 [00:01<?, ?it/s, -ELBO=3.0358, Potential Metric=0.0003, Entropy Metric=0.0094]
+Training Epochs:   0%|          | 0/1 [00:01<?, ?it/s, -ELBO=3.2896, Potential Metric=0.0005, Entropy Metric=0.0111]
+
+Epoch 0:  16%|█▌        | 5/32 [00:01<00:05,  4.91it/s][A
+Training Epochs:   0%|          | 0/1 [00:01<?, ?it/s, -ELBO=3.6418, Potential Metric=0.0007, Entropy Metric=0.0128]
+Training Epochs:   0%|          | 0/1 [00:01<?, ?it/s, -ELBO=3.4110, Potential Metric=0.0009, Entropy Metric=0.0147]
+
+Epoch 0:  22%|██▏       | 7/32 [00:01<00:03,  6.65it/s][A
+Training Epochs:   0%|          | 0/1 [00:01<?, ?it/s, -ELBO=3.0275, Potential Metric=0.0010, Entropy Metric=0.0142]
+Training Epochs:   0%|          | 0/1 [00:01<?, ?it/s, -ELBO=3.5317, Potential Metric=0.0011, Entropy Metric=0.0162]
+
+Epoch 0:  28%|██▊       | 9/32 [00:01<00:02,  8.09it/s][A
+Training Epochs:   0%|          | 0/1 [00:01<?, ?it/s, -ELBO=3.1629, Potential Metric=0.0010, Entropy Metric=0.0152]
+Training Epochs:   0%|          | 0/1 [00:01<?, ?it/s, -ELBO=3.3335, Potential Metric=0.0009, Entropy Metric=0.0167]
+
+Epoch 0:  34%|███▍      | 11/32 [00:01<00:02,  9.35it/s][A
+Training Epochs:   0%|          | 0/1 [00:02<?, ?it/s, -ELBO=3.4259, Potential Metric=0.0009, Entropy Metric=0.0174]
+Training Epochs:   0%|          | 0/1 [00:02<?, ?it/s, -ELBO=3.9198, Potential Metric=0.0007, Entropy Metric=0.0191]
+
+Epoch 0:  41%|████      | 13/32 [00:02<00:01, 10.31it/s][A
+Training Epochs:   0%|          | 0/1 [00:02<?, ?it/s, -ELBO=3.4082, Potential Metric=0.0008, Entropy Metric=0.0201]
+Training Epochs:   0%|          | 0/1 [00:02<?, ?it/s, -ELBO=3.0332, Potential Metric=0.0007, Entropy Metric=0.0178]
+
+Epoch 0:  47%|████▋     | 15/32 [00:02<00:01, 10.26it/s][A
+Training Epochs:   0%|          | 0/1 [00:02<?, ?it/s, -ELBO=3.3453, Potential Metric=0.0007, Entropy Metric=0.0174]
+Training Epochs:   0%|          | 0/1 [00:02<?, ?it/s, -ELBO=3.2038, Potential Metric=0.0006, Entropy Metric=0.0143]
+
+Epoch 0:  53%|█████▎    | 17/32 [00:02<00:01, 10.93it/s][A
+Training Epochs:   0%|          | 0/1 [00:02<?, ?it/s, -ELBO=3.2907, Potential Metric=0.0005, Entropy Metric=0.0143]
+Training Epochs:   0%|          | 0/1 [00:02<?, ?it/s, -ELBO=3.2099, Potential Metric=0.0004, Entropy Metric=0.0128]
+
+Epoch 0:  59%|█████▉    | 19/32 [00:02<00:01, 11.38it/s][A
+Training Epochs:   0%|          | 0/1 [00:02<?, ?it/s, -ELBO=2.9848, Potential Metric=0.0003, Entropy Metric=0.0112]
+Training Epochs:   0%|          | 0/1 [00:02<?, ?it/s, -ELBO=3.1724, Potential Metric=0.0002, Entropy Metric=0.0103]
+
+Epoch 0:  66%|██████▌   | 21/32 [00:02<00:00, 11.71it/s][A
+Training Epochs:   0%|          | 0/1 [00:02<?, ?it/s, -ELBO=3.0128, Potential Metric=0.0002, Entropy Metric=0.0112]
+Training Epochs:   0%|          | 0/1 [00:02<?, ?it/s, -ELBO=2.9834, Potential Metric=0.0003, Entropy Metric=0.0109]
+
+Epoch 0:  72%|███████▏  | 23/32 [00:02<00:00, 11.99it/s][A
+Training Epochs:   0%|          | 0/1 [00:03<?, ?it/s, -ELBO=3.4078, Potential Metric=0.0004, Entropy Metric=0.0105]
+Training Epochs:   0%|          | 0/1 [00:03<?, ?it/s, -ELBO=2.4495, Potential Metric=0.0003, Entropy Metric=0.0090]
+
+Epoch 0:  78%|███████▊  | 25/32 [00:03<00:00,  9.29it/s][A
+Training Epochs:   0%|          | 0/1 [00:03<?, ?it/s, -ELBO=3.1219, Potential Metric=0.0004, Entropy Metric=0.0092]
+Training Epochs:   0%|          | 0/1 [00:03<?, ?it/s, -ELBO=3.2242, Potential Metric=0.0004, Entropy Metric=0.0091]
+
+Epoch 0:  84%|████████▍ | 27/32 [00:03<00:00,  9.54it/s][A
+Training Epochs:   0%|          | 0/1 [00:03<?, ?it/s, -ELBO=3.1499, Potential Metric=0.0005, Entropy Metric=0.0082]
+Training Epochs:   0%|          | 0/1 [00:03<?, ?it/s, -ELBO=3.2255, Potential Metric=0.0005, Entropy Metric=0.0086]
+
+Epoch 0:  91%|█████████ | 29/32 [00:03<00:00,  9.73it/s][A
+Training Epochs:   0%|          | 0/1 [00:03<?, ?it/s, -ELBO=2.7545, Potential Metric=0.0004, Entropy Metric=0.0072]
+Training Epochs:   0%|          | 0/1 [00:03<?, ?it/s, -ELBO=3.6835, Potential Metric=0.0006, Entropy Metric=0.0079]
+
+Epoch 0:  97%|█████████▋| 31/32 [00:03<00:00,  9.89it/s][A
+Training Epochs:   0%|          | 0/1 [00:03<?, ?it/s, -ELBO=3.2467, Potential Metric=0.0006, Entropy Metric=0.0076]
+
+                                                        [A
+Training Epochs: 100%|██████████| 1/1 [00:03<00:00,  3.97s/it, -ELBO=3.2467, Potential Metric=0.0006, Entropy Metric=0.0076]
+Training Epochs: 100%|██████████| 1/1 [00:03<00:00,  3.97s/it, -ELBO=3.2467, Potential Metric=0.0006, Entropy Metric=0.0076]
+SCLSD_BENCHMARK_EVENT {"cpu_seconds": 7.216339203999999, "cuda_peak_allocated_bytes": 543767552, "cuda_peak_reserved_bytes": 660602880, "cuda_start_allocated_bytes": 10991616, "cuda_start_reserved_bytes": 25165824, "error": null, "event": "stage_end", "name": "training", "status": "ok", "time": "2026-07-17T20:14:18.131691+00:00", "wall_seconds": 4.704922191798687}

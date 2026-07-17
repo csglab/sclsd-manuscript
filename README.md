@@ -56,9 +56,9 @@ notebook.
 The notebooks use stochastic model training. The exact input files and
 checksums, dataset dimensions, package revisions, tested software environment,
 random seeds, model configurations, notebook order, and hardware are recorded
-in [REPRODUCIBILITY.md](REPRODUCIBILITY.md). Controlled end-to-end runtime and
-peak-memory measurements are tracked separately from this static
-reproducibility record.
+in [REPRODUCIBILITY.md](REPRODUCIBILITY.md). The H100 end-to-end runtime,
+CPU-memory, and GPU-memory measurements are reported in
+[benchmarks/H100_BENCHMARK_REPORT.md](benchmarks/H100_BENCHMARK_REPORT.md).
 
 ## Vignette: end-to-end example from raw data
 

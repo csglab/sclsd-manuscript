@@ -1,0 +1,183 @@
+{
+  "data_sha256": "97e9e740362ae7d38a145a0a5970734f20b61effce27d9ff4782132196135773",
+  "dataset": "bone_marrow",
+  "display_name": "Bone Marrow",
+  "effective_config": {
+    "model": {
+      "B_dim": 2,
+      "V_coeff": 0.01,
+      "layer_dims": {
+        "B_decoder": [
+          32,
+          64
+        ],
+        "potential": [
+          32,
+          32
+        ],
+        "potential_af": "logcosh",
+        "x_encoder": [
+          512,
+          256
+        ],
+        "xl_encoder": [
+          64,
+          32
+        ],
+        "z_decoder": [
+          128,
+          256
+        ],
+        "z_encoder": [
+          64,
+          32
+        ]
+      },
+      "z_dim": 10
+    },
+    "optimizer": {
+      "adam": {
+        "T_0": 40,
+        "T_mult": 1,
+        "eta_min": 1e-05,
+        "lr": 0.001
+      },
+      "kl_schedule": {
+        "af": 2
+      },
+      "wasserstein_schedule": {
+        "max_W": 0.001,
+        "max_epoch": 50,
+        "min_W": 0.0001
+      }
+    },
+    "walks": {
+      "batch_size": 256,
+      "num_walks": 4096,
+      "path_len": 10,
+      "random_state": 42
+    }
+  },
+  "environment": {
+    "accessible_cpu_threads": 32,
+    "cpu_model": "Intel(R) Xeon(R) Platinum 8468",
+    "cudnn": 90100,
+    "device": "cuda:0",
+    "gpu_name": "NVIDIA H100 80GB HBM3",
+    "gpu_total_memory_bytes": 85049802752,
+    "packages": {
+      "anndata": "0.11.4",
+      "cellrank": "2.0.7",
+      "numpy": "1.26.4",
+      "pandas": "2.3.3",
+      "pyro-ppl": "1.9.1",
+      "scanpy": "1.11.5",
+      "scikit-learn": "1.7.2",
+      "scipy": "1.15.3",
+      "sclsd": "0.3.0",
+      "torch": "2.4.1",
+      "torchdiffeq": "0.2.5"
+    },
+    "platform": "Linux-5.15.0-176-generic-x86_64-with-glibc2.35",
+    "python": "3.10.12 (main, Jun 22 2026, 18:55:27) [GCC 11.4.0]",
+    "torch_cuda": "12.1",
+    "torch_num_interop_threads": 96,
+    "torch_num_threads": 32
+  },
+  "epochs": 1,
+  "finished_at": "2026-07-17T20:12:52.413852+00:00",
+  "implementation": "dense",
+  "notebook_sha256": "1299802b4e316014a5dbdf9a1de51c229d962efc06e2549f37beb5e111506c51",
+  "peak_rss_self_bytes": 1724633088,
+  "run_kind": "controlled-smoke",
+  "schema_version": 1,
+  "skip_training": true,
+  "source": {
+    "git_branch": "sclsd-dense",
+    "git_commit": "7e1937986419b66d69d3f404add114d8dccba012",
+    "git_status_porcelain": "",
+    "has_sparse_sampler": false,
+    "imported_module": "/home/saberi/projects/lsd/sclsd-review/sclsd-dense/src/sclsd/__init__.py",
+    "source_root": "/home/saberi/projects/lsd/sclsd-review/sclsd-dense"
+  },
+  "spec": {
+    "batch_size": 256,
+    "config_overrides": {
+      "optimizer.kl_schedule.af": 2
+    },
+    "data_path": "Zenodo/BoneMarrow/preprocessed_adata.h5ad",
+    "data_sha256": "97e9e740362ae7d38a145a0a5970734f20b61effce27d9ff4782132196135773",
+    "display_name": "Bone Marrow",
+    "epochs": 200,
+    "expected_shape": [
+      5292,
+      2000
+    ],
+    "name": "bone_marrow",
+    "notebook_path": "Notebooks/BoneMarrow/train.ipynb",
+    "notebook_sha256": "1299802b4e316014a5dbdf9a1de51c229d962efc06e2549f37beb5e111506c51",
+    "num_walks": 4096,
+    "path_len": 10,
+    "prior_time_key": "palantir_pseudotime",
+    "seed": 42
+  },
+  "stages": [
+    {
+      "cpu_seconds": 0.04781581499999987,
+      "cuda_peak_allocated_bytes": 0,
+      "cuda_peak_reserved_bytes": 0,
+      "cuda_start_allocated_bytes": 0,
+      "cuda_start_reserved_bytes": 0,
+      "error": null,
+      "name": "data_load",
+      "status": "ok",
+      "wall_seconds": 0.047958748415112495
+    },
+    {
+      "cpu_seconds": 0.051008190999999314,
+      "cuda_peak_allocated_bytes": 10765824,
+      "cuda_peak_reserved_bytes": 25165824,
+      "cuda_start_allocated_bytes": 0,
+      "cuda_start_reserved_bytes": 0,
+      "error": null,
+      "name": "model_initialization",
+      "status": "ok",
+      "wall_seconds": 0.053814951330423355
+    },
+    {
+      "cpu_seconds": 0.9513478319999997,
+      "cuda_peak_allocated_bytes": 10746368,
+      "cuda_peak_reserved_bytes": 25165824,
+      "cuda_start_allocated_bytes": 10746368,
+      "cuda_start_reserved_bytes": 25165824,
+      "error": null,
+      "name": "prior_transition",
+      "status": "ok",
+      "wall_seconds": 0.4924655333161354
+    },
+    {
+      "cpu_seconds": 0.2731956440000012,
+      "cuda_peak_allocated_bytes": 296405504,
+      "cuda_peak_reserved_bytes": 314572800,
+      "cuda_start_allocated_bytes": 10746368,
+      "cuda_start_reserved_bytes": 25165824,
+      "error": null,
+      "name": "walk_generation",
+      "status": "ok",
+      "wall_seconds": 0.1761510269716382
+    }
+  ],
+  "started_at": "2026-07-17T20:12:47.137343+00:00",
+  "status": "ok",
+  "total_cpu_seconds": 1.3266808759999993,
+  "total_wall_seconds": 0.7750973952934146,
+  "walks": {
+    "dtype": "torch.int32",
+    "sha256": "e5e075974ee31075ff693013fc4425e0d4387574e209cd901676e88c0f42abea",
+    "shape": [
+      4096,
+      10
+    ],
+    "source": "native"
+  }
+}
