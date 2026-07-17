@@ -175,8 +175,8 @@ implementations loaded the identical content hash for each dataset. The full
 methodology, stage-level results, limitations, exact commits, and rerun commands
 are in [`benchmarks/H100_BENCHMARK_REPORT.md`](benchmarks/H100_BENCHMARK_REPORT.md).
 
-The sparse-transition benchmarks and their limitations are recorded in
-`sclsd/benchmarks/results/comment7_benchmark_report.md` in the package
-repository. Those five-repetition measurements address function-level
-transition construction and walk-generation scaling and complement the
-end-to-end results above.
+The package repository contains the
+[comment 7 sparse-memory benchmark report](https://github.com/csglab/sclsd/blob/8fc9285426b98e4e3d078ec50e849175b22d3fd4/benchmarks/results/comment7_benchmark_report.md)
+and its adjacent raw results. Those five-repetition measurements address
+function-level transition construction and walk-generation scaling and
+complement the end-to-end results above.

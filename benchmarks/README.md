@@ -89,4 +89,4 @@ commands were actually executed.
 
 The completed H100 measurements and their interpretation are recorded in
 [`H100_BENCHMARK_REPORT.md`](H100_BENCHMARK_REPORT.md). Raw outputs are under
-`results/h100/`.
+[`results/h100/`](results/h100/).

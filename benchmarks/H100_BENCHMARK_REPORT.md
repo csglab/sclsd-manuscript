@@ -109,17 +109,17 @@ memory. The two end-to-end workflows also differ in model architecture, walk
 configuration, and epoch count, so they should not be used to fit a general
 runtime-scaling exponent. The five-repetition function-level scaling benchmarks
 for transition and walk construction are reported separately in the package
-repository.
+repository's
+[comment 7 sparse-memory benchmark report](https://github.com/csglab/sclsd/blob/8fc9285426b98e4e3d078ec50e849175b22d3fd4/benchmarks/results/comment7_benchmark_report.md).
 
 ## Evidence and rerunning
 
-The full native outputs are in
-`benchmarks/results/h100/native-full-20260717T185454Z/`. The controlled smoke
-outputs are in
-`benchmarks/results/h100/controlled-smoke-20260717T201245Z/`. Each run contains
-`result.json`, `monitor.json`, and `stdout.log`; each matrix contains generated
-CSV and Markdown summaries.
+The [full native outputs](results/h100/native-full-20260717T185454Z/) and
+[controlled smoke outputs](results/h100/controlled-smoke-20260717T201245Z/)
+are included with this report. Each run contains `result.json`, `monitor.json`,
+and `stdout.log`; each matrix contains generated CSV and Markdown summaries.
 
-Commands and measurement definitions are documented in `benchmarks/README.md`.
+Commands and measurement definitions are documented in the
+[benchmark README](README.md).
 The scripts can be rerun on another NVIDIA server without source changes; the
 result must be labeled with the hardware detected in that run.
