@@ -10,17 +10,17 @@ The manuscript is available as a
 
 ## Datasets
 
-| Folder | Dataset |
-|--------|---------|
-| BoneMarrow | Human hematopoiesis |
-| Cancer | Lung adenocarcinoma progression |
-| Dentategyrus | Dentate gyrus neurogenesis |
-| Erythroid | Mouse erythroid gastrulation |
-| Mouse_cortex | Mouse cortical development |
-| Pancreas | Pancreatic endocrinogenesis |
-| Zebrafish | Zebrafish axial mesoderm development |
-| Vignette | Human hematopoiesis |
-| Unseen_Pancreas | Pancreatic endocrinogenesis with held-out populations |
+| Folder | Dataset | Reference |
+|---|---|---|
+| BoneMarrow | Human hematopoiesis | Setty et al., Nat Biotechnol 2019 |
+| Cancer | Lung adenocarcinoma progression | Yang et al., Cell 2022 |
+| Dentategyrus | Dentate gyrus neurogenesis | Hochgerner et al., Nat Neurosci 2018 |
+| Erythroid | Mouse erythroid gastrulation | Pijuan-Sala et al., Nature 2019 |
+| Mouse_cortex | Mouse cortical development | Zheng et al., Cell 2024 |
+| Pancreas | Pancreatic endocrinogenesis | Klein et al., Nature 2025 |
+| Zebrafish | Zebrafish axial mesoderm development | Farrell et al., Science 2018 |
+| Vignette | Human hematopoiesis | Setty et al., Nat Biotechnol 2019 |
+| Unseen_Pancreas | Pancreatic endocrinogenesis with held-out populations | Klein et al., Nature 2025 |
 
 ## Setup
 
