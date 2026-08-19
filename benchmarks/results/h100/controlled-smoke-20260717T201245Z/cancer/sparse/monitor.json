@@ -1,0 +1,317 @@
+{
+  "command": [
+    "/home/saberi/projects/lsd/sclsd-review/sclsd-env/bin/python",
+    "/home/saberi/projects/lsd/sclsd-review/sclsd-manuscript/benchmarks/run_training.py",
+    "--dataset",
+    "cancer",
+    "--implementation",
+    "sparse",
+    "--source-root",
+    "/home/saberi/projects/lsd/sclsd-review/sclsd",
+    "--manuscript-root",
+    "/home/saberi/projects/lsd/sclsd-review/sclsd-manuscript",
+    "--output",
+    "/home/saberi/projects/lsd/sclsd-review/sclsd-manuscript/benchmarks/results/h100/controlled-smoke-20260717T201245Z/cancer/sparse/result.json",
+    "--device",
+    "cuda:0",
+    "--run-kind",
+    "controlled-smoke",
+    "--epochs",
+    "1",
+    "--walks-in",
+    "/home/saberi/projects/lsd/sclsd-review/sclsd-manuscript/benchmarks/results/h100/controlled-smoke-20260717T201245Z/cancer/fixed_dense_walks.npy"
+  ],
+  "cpu_threads": 32,
+  "events": [
+    {
+      "event": "stage_start",
+      "stage": "data_load",
+      "time": "2026-07-17T20:14:12.691518+00:00"
+    },
+    {
+      "cpu_seconds": 0.5052168750000003,
+      "cuda_peak_allocated_bytes": 0,
+      "cuda_peak_reserved_bytes": 0,
+      "cuda_start_allocated_bytes": 0,
+      "cuda_start_reserved_bytes": 0,
+      "error": null,
+      "event": "stage_end",
+      "name": "data_load",
+      "status": "ok",
+      "time": "2026-07-17T20:14:13.196987+00:00",
+      "wall_seconds": 0.5054507963359356
+    },
+    {
+      "event": "stage_start",
+      "stage": "model_initialization",
+      "time": "2026-07-17T20:14:13.197362+00:00"
+    },
+    {
+      "cpu_seconds": 0.22385033399999976,
+      "cuda_peak_allocated_bytes": 11011072,
+      "cuda_peak_reserved_bytes": 25165824,
+      "cuda_start_allocated_bytes": 0,
+      "cuda_start_reserved_bytes": 0,
+      "error": null,
+      "event": "stage_end",
+      "name": "model_initialization",
+      "status": "ok",
+      "time": "2026-07-17T20:14:13.424781+00:00",
+      "wall_seconds": 0.22740170639008284
+    },
+    {
+      "event": "stage_start",
+      "stage": "fixed_walk_load",
+      "time": "2026-07-17T20:14:13.425211+00:00"
+    },
+    {
+      "cpu_seconds": 0.000772226999998793,
+      "cuda_peak_allocated_bytes": 10991616,
+      "cuda_peak_reserved_bytes": 25165824,
+      "cuda_start_allocated_bytes": 10991616,
+      "cuda_start_reserved_bytes": 25165824,
+      "error": null,
+      "event": "stage_end",
+      "name": "fixed_walk_load",
+      "status": "ok",
+      "time": "2026-07-17T20:14:13.426070+00:00",
+      "wall_seconds": 0.0008509177714586258
+    },
+    {
+      "event": "stage_start",
+      "stage": "training",
+      "time": "2026-07-17T20:14:13.426753+00:00"
+    },
+    {
+      "cpu_seconds": 7.216339203999999,
+      "cuda_peak_allocated_bytes": 543767552,
+      "cuda_peak_reserved_bytes": 660602880,
+      "cuda_start_allocated_bytes": 10991616,
+      "cuda_start_reserved_bytes": 25165824,
+      "error": null,
+      "event": "stage_end",
+      "name": "training",
+      "status": "ok",
+      "time": "2026-07-17T20:14:18.131691+00:00",
+      "wall_seconds": 4.704922191798687
+    }
+  ],
+  "finished_at": "2026-07-17T20:14:19.091709+00:00",
+  "gpu_index": 0,
+  "gpu_processes_before_run": {},
+  "hardware": {
+    "compute_capability": "9.0",
+    "driver_cuda_compatibility": "12.6",
+    "driver_version": "560.35.05",
+    "index": 0,
+    "memory_total_mib": 81559.0,
+    "name": "NVIDIA H100 80GB HBM3"
+  },
+  "return_code": 0,
+  "sample_interval_seconds": 1.0,
+  "samples": [
+    {
+      "aggregate_cpu_percent": null,
+      "cpu_seconds_process_tree": 0.01,
+      "elapsed_seconds": 0.0006758095696568489,
+      "gpu_memory_used_mib": 1.0,
+      "gpu_power_watts": 127.66,
+      "gpu_utilization_percent": 0.0,
+      "normalized_cpu_percent": null,
+      "process_gpu_memory_mib": 0.0,
+      "rss_process_tree_bytes": 10657792,
+      "stage": null
+    },
+    {
+      "aggregate_cpu_percent": 425.49667585607415,
+      "cpu_seconds_process_tree": 4.59,
+      "elapsed_seconds": 1.0770649472251534,
+      "gpu_memory_used_mib": 1.0,
+      "gpu_power_watts": 123.16,
+      "gpu_utilization_percent": 0.0,
+      "normalized_cpu_percent": 13.296771120502317,
+      "process_gpu_memory_mib": 0.0,
+      "rss_process_tree_bytes": 347090944,
+      "stage": null
+    },
+    {
+      "aggregate_cpu_percent": 380.357769806604,
+      "cpu_seconds_process_tree": 8.93,
+      "elapsed_seconds": 2.2180959302932024,
+      "gpu_memory_used_mib": 1.0,
+      "gpu_power_watts": 74.16,
+      "gpu_utilization_percent": 0.0,
+      "normalized_cpu_percent": 11.886180306456374,
+      "process_gpu_memory_mib": 0.0,
+      "rss_process_tree_bytes": 426061824,
+      "stage": null
+    },
+    {
+      "aggregate_cpu_percent": 96.53455930109958,
+      "cpu_seconds_process_tree": 10.030000000000001,
+      "elapsed_seconds": 3.357584221288562,
+      "gpu_memory_used_mib": 1.0,
+      "gpu_power_watts": 72.97,
+      "gpu_utilization_percent": 0.0,
+      "normalized_cpu_percent": 3.016704978159362,
+      "process_gpu_memory_mib": 0.0,
+      "rss_process_tree_bytes": 430583808,
+      "stage": null
+    },
+    {
+      "aggregate_cpu_percent": 74.26217853587701,
+      "cpu_seconds_process_tree": 10.850000000000001,
+      "elapsed_seconds": 4.461780214682221,
+      "gpu_memory_used_mib": 1.0,
+      "gpu_power_watts": 72.96,
+      "gpu_utilization_percent": 0.0,
+      "normalized_cpu_percent": 2.3206930792461566,
+      "process_gpu_memory_mib": 0.0,
+      "rss_process_tree_bytes": 592678912,
+      "stage": null
+    },
+    {
+      "aggregate_cpu_percent": 94.13458496757703,
+      "cpu_seconds_process_tree": 11.899999999999999,
+      "elapsed_seconds": 5.57720447704196,
+      "gpu_memory_used_mib": 5.0,
+      "gpu_power_watts": 72.99,
+      "gpu_utilization_percent": 0.0,
+      "normalized_cpu_percent": 2.941705780236782,
+      "process_gpu_memory_mib": 0.0,
+      "rss_process_tree_bytes": 602943488,
+      "stage": null
+    },
+    {
+      "aggregate_cpu_percent": 96.9984486432935,
+      "cpu_seconds_process_tree": 13.21,
+      "elapsed_seconds": 6.927741540595889,
+      "gpu_memory_used_mib": 653.0,
+      "gpu_power_watts": 123.3,
+      "gpu_utilization_percent": 0.0,
+      "normalized_cpu_percent": 3.031201520102922,
+      "process_gpu_memory_mib": 642.0,
+      "rss_process_tree_bytes": 2320179200,
+      "stage": "training"
+    },
+    {
+      "aggregate_cpu_percent": 335.3348569334358,
+      "cpu_seconds_process_tree": 16.91,
+      "elapsed_seconds": 8.03111624903977,
+      "gpu_memory_used_mib": 905.0,
+      "gpu_power_watts": 123.27,
+      "gpu_utilization_percent": 1.0,
+      "normalized_cpu_percent": 10.479214279169868,
+      "process_gpu_memory_mib": 894.0,
+      "rss_process_tree_bytes": 5311950848,
+      "stage": "training"
+    },
+    {
+      "aggregate_cpu_percent": 92.33501189913817,
+      "cpu_seconds_process_tree": 17.96,
+      "elapsed_seconds": 9.16827969159931,
+      "gpu_memory_used_mib": 1399.0,
+      "gpu_power_watts": 133.25,
+      "gpu_utilization_percent": 36.0,
+      "normalized_cpu_percent": 2.8854691218480677,
+      "process_gpu_memory_mib": 1388.0,
+      "rss_process_tree_bytes": 5819850752,
+      "stage": "training"
+    },
+    {
+      "aggregate_cpu_percent": 100.0758648303831,
+      "cpu_seconds_process_tree": 19.080000000000002,
+      "elapsed_seconds": 10.287430649623275,
+      "gpu_memory_used_mib": 1399.0,
+      "gpu_power_watts": 139.74,
+      "gpu_utilization_percent": 34.0,
+      "normalized_cpu_percent": 3.1273707759494718,
+      "process_gpu_memory_mib": 1388.0,
+      "rss_process_tree_bytes": 5819965440,
+      "stage": "training"
+    },
+    {
+      "aggregate_cpu_percent": 100.0084831457152,
+      "cpu_seconds_process_tree": 20.2,
+      "elapsed_seconds": 11.40733564645052,
+      "gpu_memory_used_mib": 1399.0,
+      "gpu_power_watts": 133.67,
+      "gpu_utilization_percent": 27.0,
+      "normalized_cpu_percent": 3.1252650983036,
+      "process_gpu_memory_mib": 1388.0,
+      "rss_process_tree_bytes": 5820002304,
+      "stage": "training"
+    }
+  ],
+  "schema_version": 1,
+  "started_at": "2026-07-17T20:14:06.546389+00:00",
+  "summary": {
+    "cpu_aggregate_percent": {
+      "mean": 179.55384339191977,
+      "median": 98.50346589450436,
+      "peak": 425.49667585607415
+    },
+    "cpu_normalized_percent": {
+      "mean": 5.611057605997493,
+      "median": 3.078233309203261,
+      "peak": 13.296771120502317
+    },
+    "gpu_device_memory_used_mib": {
+      "mean": 524.0909090909091,
+      "median": 5.0,
+      "peak": 1399.0
+    },
+    "gpu_power_watts": {
+      "mean": 108.82999999999998,
+      "median": 123.27,
+      "peak": 139.74
+    },
+    "gpu_process_memory_mib": {
+      "mean": 518.1818181818181,
+      "median": 0.0,
+      "peak": 1388.0
+    },
+    "gpu_utilization_percent": {
+      "mean": 8.909090909090908,
+      "median": 0.0,
+      "peak": 36.0
+    },
+    "peak_rss_process_tree_bytes": 5820002304,
+    "per_stage": {
+      "training": {
+        "cpu_aggregate_percent": {
+          "mean": 144.95053309039315,
+          "median": 100.0084831457152,
+          "peak": 335.3348569334358
+        },
+        "cpu_normalized_percent": {
+          "mean": 4.529704159074786,
+          "median": 3.1252650983036,
+          "peak": 10.479214279169868
+        },
+        "gpu_device_memory_used_mib": {
+          "mean": 1151.0,
+          "median": 1399.0,
+          "peak": 1399.0
+        },
+        "gpu_power_watts": {
+          "mean": 130.64600000000002,
+          "median": 133.25,
+          "peak": 139.74
+        },
+        "gpu_process_memory_mib": {
+          "mean": 1140.0,
+          "median": 1388.0,
+          "peak": 1388.0
+        },
+        "gpu_utilization_percent": {
+          "mean": 19.6,
+          "median": 27.0,
+          "peak": 36.0
+        },
+        "peak_rss_process_tree_bytes": 5820002304
+      }
+    }
+  },
+  "wall_seconds": 12.545308443717659
+}

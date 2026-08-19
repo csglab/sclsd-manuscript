@@ -1,0 +1,209 @@
+{
+  "data_sha256": "86272debc454c59a54fe323c4a0534acea1f99ea5f170fe660b3e019dc1c7c91",
+  "dataset": "cancer",
+  "display_name": "Cancer",
+  "effective_config": {
+    "model": {
+      "B_dim": 2,
+      "V_coeff": 0.0001,
+      "layer_dims": {
+        "B_decoder": [
+          32,
+          64
+        ],
+        "potential": [
+          16,
+          16
+        ],
+        "potential_af": "logcosh",
+        "x_encoder": [
+          512,
+          256,
+          128
+        ],
+        "xl_encoder": [
+          64,
+          32
+        ],
+        "z_decoder": [
+          128,
+          256
+        ],
+        "z_encoder": [
+          64,
+          32
+        ]
+      },
+      "z_dim": 10
+    },
+    "optimizer": {
+      "adam": {
+        "T_0": 40,
+        "T_mult": 1,
+        "eta_min": 1e-05,
+        "lr": 0.002
+      },
+      "kl_schedule": {
+        "af": 2
+      },
+      "wasserstein_schedule": {
+        "max_W": 0.01,
+        "max_epoch": 50,
+        "min_W": 0.0001
+      }
+    },
+    "walks": {
+      "batch_size": 256,
+      "num_walks": 8192,
+      "path_len": 8,
+      "random_state": 42
+    }
+  },
+  "environment": {
+    "accessible_cpu_threads": 32,
+    "cpu_model": "Intel(R) Xeon(R) Platinum 8468",
+    "cudnn": 90100,
+    "device": "cuda:0",
+    "gpu_name": "NVIDIA H100 80GB HBM3",
+    "gpu_total_memory_bytes": 85049802752,
+    "packages": {
+      "anndata": "0.11.4",
+      "cellrank": "2.0.7",
+      "numpy": "1.26.4",
+      "pandas": "2.3.3",
+      "pyro-ppl": "1.9.1",
+      "scanpy": "1.11.5",
+      "scikit-learn": "1.7.2",
+      "scipy": "1.15.3",
+      "sclsd": "0.3.0",
+      "torch": "2.4.1",
+      "torchdiffeq": "0.2.5"
+    },
+    "platform": "Linux-5.15.0-176-generic-x86_64-with-glibc2.35",
+    "python": "3.10.12 (main, Jun 22 2026, 18:55:27) [GCC 11.4.0]",
+    "torch_cuda": "12.1",
+    "torch_num_interop_threads": 96,
+    "torch_num_threads": 32
+  },
+  "epochs": 100,
+  "finished_at": "2026-07-17T20:00:23.392906+00:00",
+  "implementation": "dense",
+  "notebook_sha256": "a62f7c23c706a0a110105a0ce347fd8c98ee7a54043acdeb4b489105ec0935b4",
+  "peak_rss_self_bytes": 37354897408,
+  "run_kind": "native-full",
+  "schema_version": 1,
+  "skip_training": false,
+  "source": {
+    "git_branch": "sclsd-dense",
+    "git_commit": "7e1937986419b66d69d3f404add114d8dccba012",
+    "git_status_porcelain": "",
+    "has_sparse_sampler": false,
+    "imported_module": "/home/saberi/projects/lsd/sclsd-review/sclsd-dense/src/sclsd/__init__.py",
+    "source_root": "/home/saberi/projects/lsd/sclsd-review/sclsd-dense"
+  },
+  "spec": {
+    "batch_size": 256,
+    "config_overrides": {
+      "model.V_coeff": 0.0001,
+      "model.layer_dims.potential": [
+        16,
+        16
+      ],
+      "model.layer_dims.x_encoder": [
+        512,
+        256,
+        128
+      ],
+      "optimizer.adam.lr": 0.002,
+      "optimizer.kl_schedule.af": 2,
+      "optimizer.wasserstein_schedule.max_W": 0.01,
+      "walks.num_walks": 8192,
+      "walks.path_len": 8
+    },
+    "data_path": "Zenodo/KP_tracer/preprocessed_adata.h5ad",
+    "data_sha256": "86272debc454c59a54fe323c4a0534acea1f99ea5f170fe660b3e019dc1c7c91",
+    "display_name": "Cancer",
+    "epochs": 100,
+    "expected_shape": [
+      33179,
+      1999
+    ],
+    "name": "cancer",
+    "notebook_path": "Notebooks/Cancer/train.ipynb",
+    "notebook_sha256": "a62f7c23c706a0a110105a0ce347fd8c98ee7a54043acdeb4b489105ec0935b4",
+    "num_walks": 8192,
+    "path_len": 8,
+    "prior_time_key": "transferred_phylo_pseudotime",
+    "seed": 42
+  },
+  "stages": [
+    {
+      "cpu_seconds": 0.4947430639999997,
+      "cuda_peak_allocated_bytes": 0,
+      "cuda_peak_reserved_bytes": 0,
+      "cuda_start_allocated_bytes": 0,
+      "cuda_start_reserved_bytes": 0,
+      "error": null,
+      "name": "data_load",
+      "status": "ok",
+      "wall_seconds": 0.49496056605130434
+    },
+    {
+      "cpu_seconds": 0.2271086769999986,
+      "cuda_peak_allocated_bytes": 11011072,
+      "cuda_peak_reserved_bytes": 25165824,
+      "cuda_start_allocated_bytes": 0,
+      "cuda_start_reserved_bytes": 0,
+      "error": null,
+      "name": "model_initialization",
+      "status": "ok",
+      "wall_seconds": 0.23038633819669485
+    },
+    {
+      "cpu_seconds": 20.304501025999997,
+      "cuda_peak_allocated_bytes": 10991616,
+      "cuda_peak_reserved_bytes": 25165824,
+      "cuda_start_allocated_bytes": 10991616,
+      "cuda_start_reserved_bytes": 25165824,
+      "error": null,
+      "name": "prior_transition",
+      "status": "ok",
+      "wall_seconds": 14.885341815650463
+    },
+    {
+      "cpu_seconds": 3.1518892670000014,
+      "cuda_peak_allocated_bytes": 6589822976,
+      "cuda_peak_reserved_bytes": 6606028800,
+      "cuda_start_allocated_bytes": 10991616,
+      "cuda_start_reserved_bytes": 25165824,
+      "error": null,
+      "name": "walk_generation",
+      "status": "ok",
+      "wall_seconds": 3.1517336908727884
+    },
+    {
+      "cpu_seconds": 1009.9866733819999,
+      "cuda_peak_allocated_bytes": 570585600,
+      "cuda_peak_reserved_bytes": 6677331968,
+      "cuda_start_allocated_bytes": 10991616,
+      "cuda_start_reserved_bytes": 6606028800,
+      "error": null,
+      "name": "training",
+      "status": "ok",
+      "wall_seconds": 630.465532604605
+    }
+  ],
+  "started_at": "2026-07-17T19:49:29.184164+00:00",
+  "status": "ok",
+  "total_cpu_seconds": 1034.16824567,
+  "total_wall_seconds": 649.231302571483,
+  "walks": {
+    "dtype": "torch.int32",
+    "sha256": "c5739a7bdb17182a4952a733aeb1a45c60b81ff1dd732684f77973b8e250ed74",
+    "shape": [
+      8192,
+      8
+    ],
+    "source": "native"
+  }
+}

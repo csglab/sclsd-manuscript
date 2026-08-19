@@ -1,0 +1,2 @@
+# Matplotlib generates a machine-local font cache for each isolated run.
+results/**/matplotlib/
